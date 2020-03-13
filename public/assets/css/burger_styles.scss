@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+// ---------- Sass Variables --------- //
+
+$tangerine: rgb(253, 234, 122);
+$bloodOrange: rgb(231, 69, 20);
+$brightOrange: rgb(255, 166, 0);
+$lighterBlue: rgb(62, 175, 209);
+$darkerBlue: rgb(2,117,216);
+$darkGrey: rgb(24, 24, 24);
+
+// ---------- Sass Mixins --------- //
+
+@mixin flex ($direction, $content) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+}
+
+// ---------- CSS Reset --------- //
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+// ---------- Base Styles --------- //
+
+body {
+    @include flex(column, center);
+    background-color: $tangerine;
+    color: $bloodOrange;
+    font-family: 'Open Sans', sans-serif;
+    ul {
+        list-style: none;
+    }
+    button {
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+// ---------- Header Styles --------- //
+
+header {
+    @include flex(column, center);
+    img {
+        height: 200px;
+        margin: 30px auto 0px;
+        width: 200px;
+    }
+    
+    h1 {
+        color: $bloodOrange;
+        font-size: 2.2em;
+        font-weight: lighter;
+        margin: 10px auto;
+    }
+}
+
+// ---------- Burger List Styles --------- //
+
+#burger-container {
+    @include flex(row, space-around);
+    div {
+        // border: 1px solid black;
+        margin: 10px;
+        width: 50%;
+        ul {
+            padding: 10px;
+            li {
+                @include flex(row, space-between);
+                span, 
+                button {
+                    font-size: 0.9em;
+                    margin: 8px;
+                    padding: 8px;
+                }
+                span {
+                    background-color: white;
+                    border: 2px solid $brightOrange;
+                    border-radius: 5px;
+                    color: $darkGrey;
+                    width: 70%;
+                }
+                button {
+                    background-image: linear-gradient($brightOrange, $bloodOrange);
+                }
+            }
+        }
+    }
+}
+
+// ---------- Form Styles --------- //
+
+form {
+    @include flex(column, center);
+    margin: 10px auto;
+    div {
+        margin: 10px auto;
+        input {
+            border: 2px solid $lighterBlue;
+            border-radius: 5px;
+            margin-right: 8px;
+            padding: 10px;
+        }
+        button {
+            background-image: linear-gradient($lighterBlue, $darkerBlue);
+            font-size: 1em;
+            padding: 8px 20px;
+        }
+    }
+    label {
+        color: $darkGrey;
+        font-size: 1em;
+        text-align: center;
+    }
+}

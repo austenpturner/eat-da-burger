@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fdea7a;
+  color: #e74514;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body ul {
+  list-style: none;
+}
+
+body button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header img {
+  height: 200px;
+  margin: 30px auto 0px;
+  width: 200px;
+}
+
+header h1 {
+  color: #e74514;
+  font-size: 2.2em;
+  font-weight: lighter;
+  margin: 10px auto;
+}
+
+#burger-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#burger-container div {
+  margin: 10px;
+  width: 50%;
+}
+
+#burger-container div ul {
+  padding: 10px;
+}
+
+#burger-container div ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#burger-container div ul li span,
+#burger-container div ul li button {
+  font-size: 0.9em;
+  margin: 8px;
+  padding: 8px;
+}
+
+#burger-container div ul li span {
+  background-color: white;
+  border: 2px solid #ffa600;
+  border-radius: 5px;
+  color: #181818;
+  width: 70%;
+}
+
+#burger-container div ul li button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffa600), to(#e74514));
+  background-image: linear-gradient(#ffa600, #e74514);
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px auto;
+}
+
+form div {
+  margin: 10px auto;
+}
+
+form div input {
+  border: 2px solid #3eafd1;
+  border-radius: 5px;
+  margin-right: 8px;
+  padding: 10px;
+}
+
+form div button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3eafd1), to(#0275d8));
+  background-image: linear-gradient(#3eafd1, #0275d8);
+  font-size: 1em;
+  padding: 8px 20px;
+}
+
+form label {
+  color: #181818;
+  font-size: 1em;
+  text-align: center;
+}
+/*# sourceMappingURL=burger_styles.css.map */

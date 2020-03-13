@@ -1,19 +1,38 @@
-<h1>Eat-Da-Burger!</h1>
+<header>
+    <img src='../assets/img/burger.svg' alt='burger image'>
+    {{!-- <div>Icons made by 
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik
+        </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div> --}}
 
-<div id='undevoured-container'>
-    <ul id='undevoured-list'></ul>
-</div>
+    <h1>Eat-Da-Burger!</h1>
+</header> 
 
-<div id='devoured-container'>
-    <ul id='devoured-list'></ul>
+<div id='burger-container'>
+    <div id='undevoured-container'>
+        <ul id='undevoured-list'>
+            {{#each burgers}}
+                <li>
+                    <span>{{id}}. {{burger_name}}</span>
+                    <button id='devour-btn'>Devour it!</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id='devoured-container'>
+        <ol id='devoured-list'></ol>
+    </div>
 </div>
 
 <form method='POST' action='/'>
-    <label for='burger-input'>Title</label>
-    <input type='text' id='burger-input' name='burger-input'>
-    <button type='submit' id='submit-btn'>Submit</button>
+    <div>
+        <input type='text' id='burger-input' name='burger-input'>
+        <button type='submit' id='submit-btn'>Submit</button>
+    </div>
+    <label for='burger-input'>
+        Enter a burger you want to eat then click the "Submit" button
+    </label>
 </form>
 
-<div id='msg-container'>
-    <p>Enter a burger you want to eat and click the "submit" button!</p>
-</div>
+
