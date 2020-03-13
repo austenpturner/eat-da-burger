@@ -13,8 +13,8 @@ const burger = {
             cb(res);
         });
     },
-    updateOne: (firstCol, secondCol, firstVal, secondVal, id, cb) => {
-        orm.updateOne('burgers', firstCol, secondCol, firstVal, secondVal, id, (res) => {
+    updateOne: (col, val, id, cb) => {
+        orm.updateOne('burgers', col, val, id, (res) => {
             cb(res);
         });
     }
@@ -22,4 +22,5 @@ const burger = {
 
 // Export burger object
 module.exports = burger;
+
 

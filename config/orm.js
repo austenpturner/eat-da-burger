@@ -30,10 +30,10 @@ const orm = {
             cb(data);
         });
     },
-    updateOne: (table, firstCol, secondCol, firstVal, secondVal, id, cb) => {
-        const queryString = `UPDATE ${table} SET ${firstCol} = ?, ${secondCol} = ? WHERE id = ?`
+    updateOne: (table, col, val, id, cb) => {
+        const queryString = `UPDATE ${table} SET ${col} = ? WHERE id = ?`
         connection.query(queryString,
-        [firstVal, secondVal, id],
+        [val, id],
         function(err, data) {
             if (err) {
             throw err;
