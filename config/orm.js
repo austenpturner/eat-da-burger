@@ -10,43 +10,35 @@ const connection = require('./connection.js');
 // Export the ORM object in `module.exports`
 
 const orm = {
-    selectAll: (cb, template) => {
-        const queryString = `SELECT * FROM burgers`;
+    selectAll: (table, cb) => {
+        const queryString = `SELECT * FROM ${table}`;
         connection.query(queryString, (err, data) => {
             if (err) {
                 throw err;
             }
-            cb(template, { burgers: data });
+            cb(data);
         });
     },
-    insertOne: (burgerName, cb, route) => {
-        const queryString = `INSERT INTO burgers (burger_name, devoured), VALUES (?, ?)`;
+    insertOne: (table, firstCol, secondCol, firstVal, secondVal, cb) => {
+        const queryString = `INSERT INTO ${table} (${firstCol}, ${secondCol}), VALUES (?, ?)`;
         connection.query(queryString, 
-        [burgerName, false],
+        [firstVal, secondVal],
         (err, data) => {
             if (err) {
                 throw err;
             }
-            console.log(data.affectedRows);
-            cb(route);
+            cb(data);
         });
     },
-    updateOne: (burgerName, devouredStatus, id) => {
-        const queryString = `UPDATE burgers SET burger_name = ?, devoured = ? WHERE id = ?`
+    updateOne: (table, firstCol, secondCol, firstVal, secondVal, id, cb) => {
+        const queryString = `UPDATE ${table} SET ${firstCol} = ?, ${secondCol} = ? WHERE id = ?`
         connection.query(queryString,
-        [burgerName, devouredStatus, id],
+        [firstVal, secondVal, id],
         function(err, data) {
             if (err) {
             throw err;
             }
-    
-            console.log(data.changedRows);
-    
-            if (data.changedRows > 0) {
-                console.log('table updated.');
-            } else {
-                console.log('no update made.');
-            }
+            cb(data);
         });
     }
 };
