@@ -22,6 +22,7 @@ app.set("view engine", "handlebars");
 // Require router
 const routes = require('./controllers/burger_controller');
 
+// Use defined routes in burger controller file
 app.use(routes);
 
 // Listen on prior defined PORT

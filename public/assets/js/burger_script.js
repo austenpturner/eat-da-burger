@@ -6,6 +6,7 @@ const deleteBtns = document.getElementsByClassName('delete-btn');
 const burgerInput = document.getElementById('burger-input');
 const submitBtn = document.getElementById('submit-btn');
 
+// Submit button event listener to post new burger to burger db and display in browser
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
     const burgerName = burgerInput.value.trim();
@@ -28,6 +29,7 @@ submitBtn.addEventListener('click', event => {
     });
 });
 
+// Devour buttons event listener to update burger devour value and move burger to devoured list
 for (let i = 0; i < devourBtns.length; i++) {
     const devourBtn = devourBtns[i];
     devourBtn.addEventListener('click', event => {
@@ -52,6 +54,7 @@ for (let i = 0; i < devourBtns.length; i++) {
     });
 };
 
+// Delete buttons event listener to delete burger from db and no longer display in browser
 for (let i = 0; i < deleteBtns.length; i++) {
     const deleteBtn = deleteBtns[i];
     deleteBtn.addEventListener('click', event => {
