@@ -10,18 +10,30 @@
 
 <div id='burger-container'>
     <div id='undevoured-container'>
-        <ul id='undevoured-list'>
+        <ul>
             {{#each burgers}}
+                {{#unless devour}}
                 <li>
-                    <span>{{id}}. {{burger_name}}</span>
-                    <button id='devour-btn'>Devour it!</button>
+                    <p>
+                        <span>{{id}}</span><span>. {{burger_name}}</span>
+                    </p>
+                    <button class='devour-btn'>Devour it!</button>
                 </li>
+                {{/unless}}
             {{/each}}
         </ul>
     </div>
 
     <div id='devoured-container'>
-        <ol id='devoured-list'></ol>
+        <ul>
+            {{#each burgers}}
+                {{#if devour}}
+                <li>
+                    <span>{{id}}. {{burger_name}}</span>
+                </li>
+                {{/if}}
+            {{/each}}
+        </ul>
     </div>
 </div>
 

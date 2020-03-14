@@ -72,13 +72,13 @@ header {
         ul {
             li {
                 @include flex(row, space-between);
-                span, 
+                p, 
                 button {
                     font-size: 0.7em;
                     margin: 5px;
                     padding: 5px;
                 }
-                span {
+                p {
                     background-color: white;
                     border: 2px solid $brightOrange;
                     border-radius: 5px;
@@ -139,13 +139,13 @@ form {
             width: 50%;
             ul {
                 li {
-                    span, 
+                    p, 
                     button {
                         font-size: 0.6em;
                         margin: 6px;
                         padding: 4px;
                     }
-                    span {
+                    p {
                         width: 66%;
                     }
                 }
@@ -184,12 +184,12 @@ form {
             margin: 8px;
             ul {
                 li {
-                    span, 
+                    p, 
                     button {
                         font-size: 0.8em;
                         margin: 8px;
                     }
-                    span {
+                    p {
                         width: 70%;
                     }
                 }
@@ -229,7 +229,7 @@ form {
             ul {
                 padding: 10px;
                 li {
-                    span, 
+                    p, 
                     button {
                         font-size: 0.9em;
                         padding: 8px;
@@ -266,12 +266,12 @@ form {
         div {
             ul {
                 li {
-                    span, 
+                    p, 
                     button {
                         font-size: 1em;
                         margin: 6px;
                     }
-                    span {
+                    p {
                         width: 76%;
                     }
                 }

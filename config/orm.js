@@ -20,7 +20,7 @@ const orm = {
         });
     },
     insertOne: (table, firstCol, secondCol, firstVal, secondVal, cb) => {
-        const queryString = `INSERT INTO ${table} (${firstCol}, ${secondCol}), VALUES (?, ?)`;
+        const queryString = `INSERT INTO ${table} (${firstCol}, ${secondCol}) VALUES (?, ?)`;
         connection.query(queryString, 
         [firstVal, secondVal],
         (err, data) => {
