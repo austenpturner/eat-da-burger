@@ -47,6 +47,7 @@ for (let i = 0; i < devourBtns.length; i++) {
             return res.json();
         }).then ( data => {
             console.log(`${data} update(s) made`);
+            location.reload();
         });
     });
 }

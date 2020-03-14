@@ -26,7 +26,6 @@ router.put('/api/burgers/:id', (req, res) => {
     burger.updateOne('devoured', 
     req.body.devoured, req.params.id, 
     data => {
-        console.log(data.changedRows);
         if (data.changedRows > 0) {
             console.log('update successful');
         } else {
