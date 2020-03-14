@@ -31,12 +31,23 @@ const orm = {
         });
     },
     updateOne: (table, col, val, id, cb) => {
-        const queryString = `UPDATE ${table} SET ${col} = ? WHERE id = ?`
+        const queryString = `UPDATE ${table} SET ${col} = ? WHERE id = ?`;
         connection.query(queryString,
         [val, id],
-        function(err, data) {
+        (err, data) => {
             if (err) {
             throw err;
+            }
+            cb(data);
+        });
+    },
+    destroy: (table, col, val, cb) => {
+        const queryString = `DELETE FROM ${table} WHERE ${col} = ?`;
+        connection.query(queryString,
+        [val],
+        (err, data) => {
+            if (err) {
+                throw err;
             }
             cb(data);
         });

@@ -1,10 +1,10 @@
 // Select DOM elements
-const undevouredList = document.getElementById('undevoured-list');
+// const undevouredList = document.getElementById('undevoured-list');
 const devouredList = document.getElementById('devoured-list');
+const devourBtns = document.getElementsByClassName('devour-btn');
+const deleteBtns = document.getElementsByClassName('delete-btn');
 const burgerInput = document.getElementById('burger-input');
 const submitBtn = document.getElementById('submit-btn');
-
-const devourBtns = document.getElementsByClassName('devour-btn');
 
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
@@ -50,5 +50,23 @@ for (let i = 0; i < devourBtns.length; i++) {
             location.reload();
         });
     });
-}
+};
+
+for (let i = 0; i < deleteBtns.length; i++) {
+    const deleteBtn = deleteBtns[i];
+    deleteBtn.addEventListener('click', event => {
+        event.preventDefault();
+        const target = event.target;
+        const id = parseInt(target.previousElementSibling.firstElementChild.textContent);
+        console.log(id);
+        fetch(`/api/burgers/${id}`, {
+            method: 'DELETE'
+        }).then( res => {
+            return res.json();
+        }).then( data => {
+            console.log(`${data} deletes(s) made`);
+            location.reload();
+        })
+    });
+};
 

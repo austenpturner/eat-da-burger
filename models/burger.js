@@ -17,6 +17,11 @@ const burger = {
         orm.updateOne('burgers', col, val, id, (res) => {
             cb(res);
         });
+    },
+    destroy: (col, val, cb) => {
+        orm.destroy('burgers', col, val, cb, (res) => {
+            cb(res);
+        });
     }
 };
 

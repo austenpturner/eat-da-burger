@@ -68,7 +68,6 @@ header {
     @include flex(column, space-around);
     margin: 18px 10px 0;
     div {
-        // border: 1px solid black;
         margin: 8px;
         h4 {
             font-weight: lighter;
@@ -98,15 +97,25 @@ header {
         }
     }
     #devoured-container {
-        // border: 1px solid black;
         margin: 8px;
         ul {
             li {
+                @include flex(row, space-between);
+                background-color: $brightOrange;
+                border-radius: 5px;
+                color: white;
+                margin: 8px 0;
+                width: 100%;
                 p {
                     background-color: $brightOrange;
                     color: white;
-                    width: 100%;
-                }  
+                    margin: 0px;
+                }
+                i {
+                    cursor: pointer;
+                    margin: auto 4px;
+                    padding: 4px;
+                }
             }
             
         }

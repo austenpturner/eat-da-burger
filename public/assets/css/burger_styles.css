@@ -121,10 +121,34 @@ header h1 {
   margin: 8px;
 }
 
+#burger-container #devoured-container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffa600;
+  border-radius: 5px;
+  color: white;
+  margin: 8px 0;
+  width: 100%;
+}
+
 #burger-container #devoured-container ul li p {
   background-color: #ffa600;
   color: white;
-  width: 100%;
+  margin: 0px;
+}
+
+#burger-container #devoured-container ul li i {
+  cursor: pointer;
+  margin: auto 4px;
+  padding: 4px;
 }
 
 form {
