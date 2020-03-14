@@ -39,47 +39,43 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 16px;
 }
 
 header img {
-  height: 200px;
-  margin: 30px auto 0px;
-  width: 200px;
+  height: 50px;
+  width: 50px;
 }
 
 header h1 {
   color: #e74514;
-  font-size: 2.2em;
+  font-size: 1.6em;
   font-weight: lighter;
-  margin: 10px auto;
+  margin: 8px 0 0 16px;
 }
 
 #burger-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: 18px 10px 0;
 }
 
 #burger-container div {
-  margin: 10px;
-  width: 50%;
-}
-
-#burger-container div ul {
-  padding: 10px;
+  margin: 8px;
 }
 
 #burger-container div ul li {
@@ -97,9 +93,9 @@ header h1 {
 
 #burger-container div ul li span,
 #burger-container div ul li button {
-  font-size: 0.9em;
-  margin: 8px;
-  padding: 8px;
+  font-size: 0.7em;
+  margin: 5px;
+  padding: 5px;
 }
 
 #burger-container div ul li span {
@@ -107,7 +103,7 @@ header h1 {
   border: 2px solid #ffa600;
   border-radius: 5px;
   color: #181818;
-  width: 70%;
+  width: 68%;
 }
 
 #burger-container div ul li button {
@@ -126,7 +122,7 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 form div {
@@ -136,20 +132,186 @@ form div {
 form div input {
   border: 2px solid #3eafd1;
   border-radius: 5px;
-  margin-right: 8px;
-  padding: 10px;
+  margin-right: 6px;
+  padding: 8px;
 }
 
 form div button {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3eafd1), to(#0275d8));
   background-image: linear-gradient(#3eafd1, #0275d8);
-  font-size: 1em;
+  font-size: 0.8em;
   padding: 8px 20px;
 }
 
 form label {
   color: #181818;
-  font-size: 1em;
+  font-size: 0.8em;
+  margin: 0 20px;
   text-align: center;
+}
+
+@media (min-width: 568px) {
+  header img {
+    height: 70px;
+    width: 70px;
+  }
+  header h1 {
+    font-size: 2em;
+    margin: 10px 0 0 16px;
+  }
+  #burger-container {
+    margin-top: 16px;
+  }
+  #burger-container div {
+    width: 50%;
+  }
+  #burger-container div ul li span,
+  #burger-container div ul li button {
+    font-size: 0.6em;
+    margin: 6px;
+    padding: 4px;
+  }
+  #burger-container div ul li span {
+    width: 66%;
+  }
+  form {
+    margin: 8px auto;
+  }
+  form div input {
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 736px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header img {
+    height: 150px;
+    margin: 30px auto 10px;
+    width: 150px;
+  }
+  header h1 {
+    font-size: 2.2em;
+    margin: 10px auto;
+  }
+  #burger-container {
+    margin-top: 40px;
+    padding: 0 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #burger-container div {
+    margin: 8px;
+  }
+  #burger-container div ul li span,
+  #burger-container div ul li button {
+    font-size: 0.8em;
+    margin: 8px;
+  }
+  #burger-container div ul li span {
+    width: 70%;
+  }
+  form {
+    margin: 20px auto;
+  }
+  form div {
+    margin: 10px auto;
+  }
+  form div input {
+    padding: 8px;
+  }
+  form div button {
+    font-size: 0.8em;
+    padding: 8px 20px;
+  }
+  form label {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1024px) {
+  header img {
+    height: 200px;
+    width: 200px;
+  }
+  #burger-container {
+    margin-top: 0;
+  }
+  #burger-container div {
+    margin: 10px;
+    width: 50%;
+  }
+  #burger-container div ul {
+    padding: 10px;
+  }
+  #burger-container div ul li span,
+  #burger-container div ul li button {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+  form div input {
+    margin-right: 8px;
+    padding: 10px;
+  }
+  form div button {
+    font-size: 1em;
+  }
+  form label {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    margin-top: 0px;
+  }
+  header h1 {
+    font-size: 2.4em;
+  }
+  #burger-container {
+    margin: 10px 50px;
+  }
+  #burger-container div ul li span,
+  #burger-container div ul li button {
+    font-size: 1em;
+    margin: 6px;
+  }
+  #burger-container div ul li span {
+    width: 76%;
+  }
+  form {
+    margin: 10px auto;
+  }
+  form div {
+    margin: 10px auto;
+  }
+  form div input {
+    margin-right: 10px;
+    padding: 14px;
+    width: 300px;
+  }
+  form div button {
+    padding: 12px 24px;
+  }
+  form label {
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=burger_styles.css.map */

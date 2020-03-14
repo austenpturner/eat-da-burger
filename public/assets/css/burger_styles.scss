@@ -48,45 +48,42 @@ body {
 // ---------- Header Styles --------- //
 
 header {
-    @include flex(column, center);
+    @include flex(row, center);
+    margin-top: 16px;
     img {
-        height: 200px;
-        margin: 30px auto 0px;
-        width: 200px;
+        height: 50px;
+        width: 50px;
     }
-    
     h1 {
         color: $bloodOrange;
-        font-size: 2.2em;
+        font-size: 1.6em;
         font-weight: lighter;
-        margin: 10px auto;
+        margin: 8px 0 0 16px;
     }
 }
 
 // ---------- Burger List Styles --------- //
 
 #burger-container {
-    @include flex(row, space-around);
+    @include flex(column, space-around);
+    margin: 18px 10px 0;
     div {
-        // border: 1px solid black;
-        margin: 10px;
-        width: 50%;
+        margin: 8px;
         ul {
-            padding: 10px;
             li {
                 @include flex(row, space-between);
                 span, 
                 button {
-                    font-size: 0.9em;
-                    margin: 8px;
-                    padding: 8px;
+                    font-size: 0.7em;
+                    margin: 5px;
+                    padding: 5px;
                 }
                 span {
                     background-color: white;
                     border: 2px solid $brightOrange;
                     border-radius: 5px;
                     color: $darkGrey;
-                    width: 70%;
+                    width: 68%;
                 }
                 button {
                     background-image: linear-gradient($brightOrange, $bloodOrange);
@@ -100,24 +97,203 @@ header {
 
 form {
     @include flex(column, center);
-    margin: 10px auto;
+    margin: 10px;
     div {
         margin: 10px auto;
         input {
             border: 2px solid $lighterBlue;
             border-radius: 5px;
-            margin-right: 8px;
-            padding: 10px;
+            margin-right: 6px;
+            padding: 8px;
         }
         button {
             background-image: linear-gradient($lighterBlue, $darkerBlue);
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 8px 20px;
         }
     }
     label {
         color: $darkGrey;
-        font-size: 1em;
+        font-size: 0.8em;
+        margin: 0 20px;
         text-align: center;
     }
 }
+
+// ---------- Media Queries --------- //
+
+@media (min-width: 568px) {
+    header {
+        img {
+            height: 70px;
+            width: 70px;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 10px 0 0 16px;
+        }
+    }
+    #burger-container {
+        margin-top: 16px;
+        div {
+            width: 50%;
+            ul {
+                li {
+                    span, 
+                    button {
+                        font-size: 0.6em;
+                        margin: 6px;
+                        padding: 4px;
+                    }
+                    span {
+                        width: 66%;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        margin: 8px auto;
+        div {
+            input {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@media (min-width: 736px) {
+    header {
+        @include flex(column, center);
+        img {
+            height: 150px;
+            margin: 30px auto 10px;
+            width: 150px;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            margin: 10px auto;
+        }
+    }
+    #burger-container {
+        margin-top: 40px;
+        padding: 0 40px;
+        @include flex(row, space-around);
+        div {
+            margin: 8px;
+            ul {
+                li {
+                    span, 
+                    button {
+                        font-size: 0.8em;
+                        margin: 8px;
+                    }
+                    span {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        margin: 20px auto;
+        div {
+            margin: 10px auto;
+            input {
+                padding: 8px;
+            }
+            button {
+                font-size: 0.8em;
+                padding: 8px 20px;
+            }
+        }
+        label {
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+    #burger-container {
+        margin-top: 0;
+        div {
+            margin: 10px;
+            width: 50%;
+            ul {
+                padding: 10px;
+                li {
+                    span, 
+                    button {
+                        font-size: 0.9em;
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        div {
+            input {
+                margin-right: 8px;
+                padding: 10px;
+            }
+            button {
+                font-size: 1em;
+            }
+        }
+        label {
+            font-size: 1em;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        margin-top: 0px;
+        h1 {
+            font-size: 2.4em;
+        }
+    }
+    #burger-container {
+        margin: 10px 50px;
+        div {
+            ul {
+                li {
+                    span, 
+                    button {
+                        font-size: 1em;
+                        margin: 6px;
+                    }
+                    span {
+                        width: 76%;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        margin: 10px auto;
+        div {
+            margin: 10px auto;
+            input {
+                margin-right: 10px;
+                padding: 14px;
+                width: 300px;
+            }
+            button {
+                padding: 12px 24px;
+            }
+        }
+        label {
+            font-size: 1em;
+        }
+    }
+}
+
