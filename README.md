@@ -42,5 +42,7 @@ I followed the directory structure provided in the homework instructions:
  
  I also used Sass for this project so I could practice with Sass variables and mixins. This was helpful for designing the layout of the page and re-using colors. 
  
+ The app is deployed on Heroku here: https://devour-burgers-hw.herokuapp.com/
+ 
  ## Thanks for reading! :smile:
  Please contact me with any questions or comments at austenpturner@msn.com
